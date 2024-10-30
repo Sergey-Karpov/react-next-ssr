@@ -26,6 +26,7 @@ const Album = async ({ albumId }: Props): Promise<ReactElement> => {
             alt={photo.title}
             width={500}
             height={300}
+            loading="lazy"
           />
         </div>
       ))}

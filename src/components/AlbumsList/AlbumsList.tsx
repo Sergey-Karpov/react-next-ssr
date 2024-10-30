@@ -13,11 +13,13 @@ const AlbumsList = async (): Promise<ReactElement> => {
   const data = await getData();
 
   return (
-    <Flex wrap="wrap" gap="middle" justify="center">
-      {data.map((album: IAlbum) => (
-        <Album albumId={album.id} key={album.id} />
-      ))}
-    </Flex>
+    <div style={{ margin: "0 auto", padding: "25px" }}>
+      <Flex wrap="wrap" gap="middle" justify="center" style={{ gap: "25px" }}>
+        {data.map((album: IAlbum) => (
+          <Album albumId={album.id} key={album.id} />
+        ))}
+      </Flex>
+    </div>
   );
 };
 
